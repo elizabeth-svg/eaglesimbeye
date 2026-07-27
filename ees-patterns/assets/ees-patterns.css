@@ -1,0 +1,329 @@
+/* ==========================================================================
+   EES Pattern Kit — case-study section patterns (native blocks, no Elementor)
+   Tokens mirror the EES / Claude Design system.
+   Loaded on the front end and inside the block editor.
+   ========================================================================== */
+
+:root {
+	--ees-bg: #08080a;
+	--ees-panel: #0b0b0e;
+	--ees-ink: #f7f7f5;
+	--ees-muted: #a8a8a4;
+	--ees-faint: #8a8a92;
+	--ees-line: #2a2a30;
+	--ees-accent: #f2ea36;
+	--ees-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+	--ees-display: "Poppins", "Helvetica Neue", Helvetica, system-ui, sans-serif;
+	--ees-body: "Schibsted Grotesk", "Helvetica Neue", Helvetica, system-ui, sans-serif;
+	--ees-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Shared -------------------------------------------------------------------- */
+.ees-cs {
+	background: var(--ees-bg);
+	color: var(--ees-ink);
+	font-family: var(--ees-body);
+	padding: clamp(72px, 11vw, 176px) clamp(24px, 5vw, 80px);
+}
+
+.ees-cs__inner {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.ees-cs__eyebrow {
+	margin: 0 0 28px;
+	font-family: var(--ees-mono);
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--ees-muted);
+}
+
+.ees-cs__eyebrow .n {
+	color: var(--ees-faint);
+}
+
+.ees-cs h2.ees-cs__title {
+	margin: 0;
+	font-family: var(--ees-display);
+	font-size: clamp(1.75rem, 2.9vw, 2.625rem);
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+	color: var(--ees-ink);
+	text-wrap: balance;
+}
+
+.ees-cs__lead {
+	max-width: 60ch;
+	margin: 24px 0 0;
+	font-size: 1.05rem;
+	line-height: 1.65;
+	color: var(--ees-muted);
+}
+
+/* Hero ---------------------------------------------------------------------- */
+.ees-case-hero {
+	position: relative;
+	min-height: 88vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	overflow: hidden;
+	background: #101013;
+	color: var(--ees-ink);
+	padding: clamp(24px, 5vw, 80px);
+}
+
+.ees-case-hero__bg {
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	z-index: 0;
+}
+
+.ees-case-hero img,
+.ees-case-hero video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.ees-case-hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(to top, rgba(8, 8, 10, 0.86) 0%, rgba(8, 8, 10, 0.2) 55%, rgba(8, 8, 10, 0.4) 100%);
+}
+
+.ees-case-hero__inner {
+	position: relative;
+	z-index: 2;
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.ees-case-hero__eyebrow {
+	margin: 0 0 clamp(12px, 2vh, 20px);
+	font-family: var(--ees-mono);
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--ees-muted);
+}
+
+.ees-case-hero h1 {
+	margin: 0;
+	max-width: 20ch;
+	font-family: var(--ees-display);
+	font-size: clamp(2rem, 5.5vw, 4.5rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+	text-wrap: balance;
+}
+
+.ees-case-hero__tagline {
+	max-width: 46ch;
+	margin: clamp(18px, 3vh, 28px) 0 0;
+	font-size: clamp(1rem, 1.6vw, 1.25rem);
+	line-height: 1.5;
+	color: #d8d8d4;
+}
+
+.ees-case-hero__cue {
+	margin: clamp(28px, 4vh, 44px) 0 0;
+	font-family: var(--ees-mono);
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--ees-muted);
+}
+
+/* Overview / meta grid ------------------------------------------------------ */
+.ees-case-meta__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+	gap: 1px;
+	background: var(--ees-line);
+	border: 1px solid var(--ees-line);
+}
+
+.ees-meta-item {
+	background: var(--ees-bg);
+	padding: clamp(20px, 2.4vw, 32px);
+}
+
+.ees-meta-item__label {
+	margin: 0 0 10px;
+	font-family: var(--ees-mono);
+	font-size: 11px;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: var(--ees-faint);
+}
+
+.ees-meta-item__value {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--ees-ink);
+}
+
+/* Pillars ------------------------------------------------------------------- */
+.ees-case-pillars__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+	gap: clamp(24px, 2.5vw, 40px);
+	margin-top: clamp(48px, 6vw, 80px);
+}
+
+.ees-pillar {
+	border-top: 1px solid var(--ees-line);
+	padding-top: 24px;
+}
+
+.ees-pillar__n {
+	font-family: var(--ees-mono);
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	color: var(--ees-faint);
+}
+
+.ees-pillar__title {
+	margin: 16px 0 10px;
+	font-family: var(--ees-display);
+	font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+	color: var(--ees-ink);
+}
+
+.ees-pillar__desc {
+	margin: 0;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	color: var(--ees-muted);
+}
+
+/* Numbered method steps ----------------------------------------------------- */
+.ees-case-steps__list {
+	margin-top: clamp(48px, 6vw, 80px);
+}
+
+.ees-step {
+	display: grid;
+	grid-template-columns: 44px minmax(0, 1fr) minmax(0, 34ch);
+	align-items: baseline;
+	gap: clamp(12px, 2vw, 24px);
+	padding: clamp(24px, 3vw, 40px) 0;
+	border-top: 1px solid var(--ees-line);
+}
+
+.ees-case-steps__list .ees-step:last-child {
+	border-bottom: 1px solid var(--ees-line);
+}
+
+.ees-step__n {
+	font-family: var(--ees-mono);
+	font-size: 11px;
+	letter-spacing: 0.18em;
+	color: var(--ees-faint);
+}
+
+.ees-step__title {
+	font-family: var(--ees-display);
+	font-size: clamp(1.375rem, 2.4vw, 2.125rem);
+	font-weight: 700;
+	line-height: 1.05;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	color: var(--ees-ink);
+}
+
+.ees-step__desc {
+	font-size: 0.875rem;
+	line-height: 1.6;
+	color: var(--ees-faint);
+}
+
+@media (max-width: 700px) {
+	.ees-step {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+}
+
+/* Results / metrics --------------------------------------------------------- */
+.ees-case-results {
+	background: var(--ees-panel);
+}
+
+.ees-case-results__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+	gap: clamp(32px, 4vw, 64px);
+	margin-top: clamp(48px, 6vw, 80px);
+}
+
+.ees-metric__figure {
+	font-family: var(--ees-display);
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	color: var(--ees-ink);
+}
+
+.ees-metric__figure em {
+	font-style: normal;
+	color: var(--ees-accent);
+}
+
+.ees-metric__label {
+	margin: 16px 0 0;
+	max-width: 28ch;
+	font-size: 0.9375rem;
+	line-height: 1.55;
+	color: var(--ees-muted);
+}
+
+/* Next project -------------------------------------------------------------- */
+.ees-case-next {
+	border-top: 1px solid var(--ees-line);
+}
+
+.ees-case-next__title {
+	margin: 12px 0 0;
+	font-family: var(--ees-display);
+	font-size: clamp(2rem, 5vw, 3.75rem);
+	font-weight: 700;
+	line-height: 1.02;
+	letter-spacing: -0.025em;
+	text-transform: uppercase;
+}
+
+.ees-case-next__title a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 200ms var(--ees-ease);
+}
+
+.ees-case-next__title a:hover {
+	color: var(--ees-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.ees-cs * {
+		transition-duration: 0.001ms !important;
+	}
+}
