@@ -3,7 +3,7 @@
  * Plugin Name:       EES Chrome
  * Plugin URI:        https://eaglesimbeye.com/
  * Description:        Site-wide header, footer and a blog-article template for eaglesimbeye.com, rendered natively (no Elementor). Reproduces the Claude Design system chrome and applies it across the whole site through wp_body_open / wp_footer, plus a styled single-post template.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Elizabeth Eagle-Simbeye
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // No direct access.
 }
 
-define( 'EES_CHROME_VERSION', '1.0.0' );
+define( 'EES_CHROME_VERSION', '1.0.1' );
 define( 'EES_CHROME_FILE', __FILE__ );
 define( 'EES_CHROME_DIR', plugin_dir_path( __FILE__ ) );
 define( 'EES_CHROME_URL', plugin_dir_url( __FILE__ ) );

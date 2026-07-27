@@ -58,5 +58,12 @@ Builder template is still assigned — step 2 fixes it.
 
 == Changelog ==
 
+= 1.0.1 =
+* Footer: darkened the overlay and toned the background glow down to a faint,
+  blurred texture so text contrast is reliable (WCAG) and the low-res asset no
+  longer reads as pixelated.
+* Footer: deliberate 3-column weighting (statement leads, links group right)
+  with proper tablet/mobile stacking, removing the dead gap between columns.
+
 = 1.0.0 =
 * Initial release: site-wide header, footer and blog-article template.
